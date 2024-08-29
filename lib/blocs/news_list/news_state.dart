@@ -7,7 +7,7 @@ class NewsState with _$NewsState {
     required String errorMessage,
   }) = _Error;
   const factory NewsState.loading() = _Loading;
-  const factory NewsState.posts({
-    required List<NewsModel> postList,
-  }) = _Posts;
+  const factory NewsState.news({
+    required List<NewsModel> newsList,
+  }) = _News;
 }

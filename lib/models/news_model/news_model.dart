@@ -8,7 +8,7 @@ class NewsModel with _$NewsModel {
     required String id,
     required String name,
     required String image,
-    required String year,
+    required String date,
     String? description,
   }) = _NewsModel;
 }

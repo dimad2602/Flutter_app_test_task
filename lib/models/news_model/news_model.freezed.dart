@@ -19,7 +19,7 @@ mixin _$NewsModel {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
-  String get year => throw _privateConstructorUsedError;
+  String get date => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
 
   /// Create a copy of NewsModel
@@ -35,7 +35,7 @@ abstract class $NewsModelCopyWith<$Res> {
       _$NewsModelCopyWithImpl<$Res, NewsModel>;
   @useResult
   $Res call(
-      {String id, String name, String image, String year, String? description});
+      {String id, String name, String image, String date, String? description});
 }
 
 /// @nodoc
@@ -56,7 +56,7 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
     Object? id = null,
     Object? name = null,
     Object? image = null,
-    Object? year = null,
+    Object? date = null,
     Object? description = freezed,
   }) {
     return _then(_value.copyWith(
@@ -72,9 +72,9 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      year: null == year
-          ? _value.year
-          : year // ignore: cast_nullable_to_non_nullable
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
               as String,
       description: freezed == description
           ? _value.description
@@ -93,7 +93,7 @@ abstract class _$$NewsModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id, String name, String image, String year, String? description});
+      {String id, String name, String image, String date, String? description});
 }
 
 /// @nodoc
@@ -112,7 +112,7 @@ class __$$NewsModelImplCopyWithImpl<$Res>
     Object? id = null,
     Object? name = null,
     Object? image = null,
-    Object? year = null,
+    Object? date = null,
     Object? description = freezed,
   }) {
     return _then(_$NewsModelImpl(
@@ -128,9 +128,9 @@ class __$$NewsModelImplCopyWithImpl<$Res>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      year: null == year
-          ? _value.year
-          : year // ignore: cast_nullable_to_non_nullable
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
               as String,
       description: freezed == description
           ? _value.description
@@ -147,7 +147,7 @@ class _$NewsModelImpl implements _NewsModel {
       {required this.id,
       required this.name,
       required this.image,
-      required this.year,
+      required this.date,
       this.description});
 
   @override
@@ -157,13 +157,13 @@ class _$NewsModelImpl implements _NewsModel {
   @override
   final String image;
   @override
-  final String year;
+  final String date;
   @override
   final String? description;
 
   @override
   String toString() {
-    return 'NewsModel(id: $id, name: $name, image: $image, year: $year, description: $description)';
+    return 'NewsModel(id: $id, name: $name, image: $image, date: $date, description: $description)';
   }
 
   @override
@@ -174,14 +174,14 @@ class _$NewsModelImpl implements _NewsModel {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.image, image) || other.image == image) &&
-            (identical(other.year, year) || other.year == year) &&
+            (identical(other.date, date) || other.date == date) &&
             (identical(other.description, description) ||
                 other.description == description));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, id, name, image, year, description);
+      Object.hash(runtimeType, id, name, image, date, description);
 
   /// Create a copy of NewsModel
   /// with the given fields replaced by the non-null parameter values.
@@ -197,7 +197,7 @@ abstract class _NewsModel implements NewsModel {
       {required final String id,
       required final String name,
       required final String image,
-      required final String year,
+      required final String date,
       final String? description}) = _$NewsModelImpl;
 
   @override
@@ -207,7 +207,7 @@ abstract class _NewsModel implements NewsModel {
   @override
   String get image;
   @override
-  String get year;
+  String get date;
   @override
   String? get description;
 

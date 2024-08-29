@@ -4,14 +4,15 @@ import 'package:test_task/data/services/news_rest_client/news_rest_client.dart';
 import 'package:test_task/models/news_model/news_model.dart';
 
 class NewsRepo implements INewsRepository {
-
   @override
   Future<List<NewsModel>> fetchNews() async {
     final dio = Dio();
     try {
-      final newsDto = await NewsRestClient(dio).fetchPosts();
+      print("fetchNews");
+      final newsResponse = await NewsRestClient(dio).fetchPosts();
+      print(newsResponse);
       final List<NewsModel> news =
-          newsDto.map((newsDto) => newsDto.toDomain()).toList();
+          newsResponse.news.map((newsDto) => newsDto.toDomain()).toList();
 
       return news;
     } catch (e) {

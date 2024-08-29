@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:test_task/data/dtos/news_dto/news_dto.dart';
+import 'package:test_task/data/response_models/news_response.dart';
 
 part 'news_rest_client.g.dart';
 
@@ -9,5 +9,5 @@ abstract class NewsRestClient {
   factory NewsRestClient(Dio dio, {String baseUrl}) = _NewsRestClient;
 
   @GET('/list.json')
-  Future<List<NewsDto>> fetchPosts();
+  Future<NewsResponse> fetchPosts();
 }

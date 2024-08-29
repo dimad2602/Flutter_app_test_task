@@ -11,7 +11,7 @@ _$NewsDtoImpl _$$NewsDtoImplFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
       name: json['name'] as String,
       image: json['image'] as String,
-      year: json['year'] as String,
+      date: json['date'] as String,
       description: json['description'] as String?,
     );
 
@@ -20,6 +20,6 @@ Map<String, dynamic> _$$NewsDtoImplToJson(_$NewsDtoImpl instance) =>
       'id': instance.id,
       'name': instance.name,
       'image': instance.image,
-      'year': instance.year,
+      'date': instance.date,
       'description': instance.description,
     };

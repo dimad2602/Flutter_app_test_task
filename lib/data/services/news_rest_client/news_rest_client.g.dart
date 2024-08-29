@@ -24,12 +24,12 @@ class _NewsRestClient implements NewsRestClient {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<List<NewsDto>> fetchPosts() async {
+  Future<NewsResponse> fetchPosts() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<List<NewsDto>>(Options(
+    final _options = _setStreamType<NewsResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -45,12 +45,10 @@ class _NewsRestClient implements NewsRestClient {
           _dio.options.baseUrl,
           baseUrl,
         )));
-    final _result = await _dio.fetch<List<dynamic>>(_options);
-    late List<NewsDto> _value;
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late NewsResponse _value;
     try {
-      _value = _result.data!
-          .map((dynamic i) => NewsDto.fromJson(i as Map<String, dynamic>))
-          .toList();
+      _value = NewsResponse.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

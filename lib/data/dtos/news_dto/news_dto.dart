@@ -11,12 +11,12 @@ class NewsDto with _$NewsDto {
     required String id,
     required String name,
     required String image,
-    required String year,
+    required String date,
     String? description,
   }) = _NewsDto;
 
   NewsModel toDomain() => NewsModel(
-      id: id, name: name, image: image, year: year, description: description);
+      id: id, name: name, image: image, date: date, description: description);
 
   factory NewsDto.fromJson(Map<String, dynamic> json) =>
       _$NewsDtoFromJson(json);

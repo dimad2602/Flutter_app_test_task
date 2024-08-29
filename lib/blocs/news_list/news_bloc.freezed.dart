@@ -176,7 +176,7 @@ mixin _$NewsState {
     required TResult Function() initial,
     required TResult Function(String errorMessage) error,
     required TResult Function() loading,
-    required TResult Function(List<NewsModel> postList) posts,
+    required TResult Function(List<NewsModel> newsList) news,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -184,7 +184,7 @@ mixin _$NewsState {
     TResult? Function()? initial,
     TResult? Function(String errorMessage)? error,
     TResult? Function()? loading,
-    TResult? Function(List<NewsModel> postList)? posts,
+    TResult? Function(List<NewsModel> newsList)? news,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -192,7 +192,7 @@ mixin _$NewsState {
     TResult Function()? initial,
     TResult Function(String errorMessage)? error,
     TResult Function()? loading,
-    TResult Function(List<NewsModel> postList)? posts,
+    TResult Function(List<NewsModel> newsList)? news,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -201,7 +201,7 @@ mixin _$NewsState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Error value) error,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Posts value) posts,
+    required TResult Function(_News value) news,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -209,7 +209,7 @@ mixin _$NewsState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Posts value)? posts,
+    TResult? Function(_News value)? news,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -217,7 +217,7 @@ mixin _$NewsState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Error value)? error,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Posts value)? posts,
+    TResult Function(_News value)? news,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -287,7 +287,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function(String errorMessage) error,
     required TResult Function() loading,
-    required TResult Function(List<NewsModel> postList) posts,
+    required TResult Function(List<NewsModel> newsList) news,
   }) {
     return initial();
   }
@@ -298,7 +298,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function(String errorMessage)? error,
     TResult? Function()? loading,
-    TResult? Function(List<NewsModel> postList)? posts,
+    TResult? Function(List<NewsModel> newsList)? news,
   }) {
     return initial?.call();
   }
@@ -309,7 +309,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function(String errorMessage)? error,
     TResult Function()? loading,
-    TResult Function(List<NewsModel> postList)? posts,
+    TResult Function(List<NewsModel> newsList)? news,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -324,7 +324,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Error value) error,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Posts value) posts,
+    required TResult Function(_News value) news,
   }) {
     return initial(this);
   }
@@ -335,7 +335,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Posts value)? posts,
+    TResult? Function(_News value)? news,
   }) {
     return initial?.call(this);
   }
@@ -346,7 +346,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Error value)? error,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Posts value)? posts,
+    TResult Function(_News value)? news,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -432,7 +432,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() initial,
     required TResult Function(String errorMessage) error,
     required TResult Function() loading,
-    required TResult Function(List<NewsModel> postList) posts,
+    required TResult Function(List<NewsModel> newsList) news,
   }) {
     return error(errorMessage);
   }
@@ -443,7 +443,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? initial,
     TResult? Function(String errorMessage)? error,
     TResult? Function()? loading,
-    TResult? Function(List<NewsModel> postList)? posts,
+    TResult? Function(List<NewsModel> newsList)? news,
   }) {
     return error?.call(errorMessage);
   }
@@ -454,7 +454,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? initial,
     TResult Function(String errorMessage)? error,
     TResult Function()? loading,
-    TResult Function(List<NewsModel> postList)? posts,
+    TResult Function(List<NewsModel> newsList)? news,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -469,7 +469,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Error value) error,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Posts value) posts,
+    required TResult Function(_News value) news,
   }) {
     return error(this);
   }
@@ -480,7 +480,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Posts value)? posts,
+    TResult? Function(_News value)? news,
   }) {
     return error?.call(this);
   }
@@ -491,7 +491,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Initial value)? initial,
     TResult Function(_Error value)? error,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Posts value)? posts,
+    TResult Function(_News value)? news,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -557,7 +557,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function(String errorMessage) error,
     required TResult Function() loading,
-    required TResult Function(List<NewsModel> postList) posts,
+    required TResult Function(List<NewsModel> newsList) news,
   }) {
     return loading();
   }
@@ -568,7 +568,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function(String errorMessage)? error,
     TResult? Function()? loading,
-    TResult? Function(List<NewsModel> postList)? posts,
+    TResult? Function(List<NewsModel> newsList)? news,
   }) {
     return loading?.call();
   }
@@ -579,7 +579,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? initial,
     TResult Function(String errorMessage)? error,
     TResult Function()? loading,
-    TResult Function(List<NewsModel> postList)? posts,
+    TResult Function(List<NewsModel> newsList)? news,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -594,7 +594,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Error value) error,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Posts value) posts,
+    required TResult Function(_News value) news,
   }) {
     return loading(this);
   }
@@ -605,7 +605,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Posts value)? posts,
+    TResult? Function(_News value)? news,
   }) {
     return loading?.call(this);
   }
@@ -616,7 +616,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Error value)? error,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Posts value)? posts,
+    TResult Function(_News value)? news,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -631,20 +631,19 @@ abstract class _Loading implements NewsState {
 }
 
 /// @nodoc
-abstract class _$$PostsImplCopyWith<$Res> {
-  factory _$$PostsImplCopyWith(
-          _$PostsImpl value, $Res Function(_$PostsImpl) then) =
-      __$$PostsImplCopyWithImpl<$Res>;
+abstract class _$$NewsImplCopyWith<$Res> {
+  factory _$$NewsImplCopyWith(
+          _$NewsImpl value, $Res Function(_$NewsImpl) then) =
+      __$$NewsImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<NewsModel> postList});
+  $Res call({List<NewsModel> newsList});
 }
 
 /// @nodoc
-class __$$PostsImplCopyWithImpl<$Res>
-    extends _$NewsStateCopyWithImpl<$Res, _$PostsImpl>
-    implements _$$PostsImplCopyWith<$Res> {
-  __$$PostsImplCopyWithImpl(
-      _$PostsImpl _value, $Res Function(_$PostsImpl) _then)
+class __$$NewsImplCopyWithImpl<$Res>
+    extends _$NewsStateCopyWithImpl<$Res, _$NewsImpl>
+    implements _$$NewsImplCopyWith<$Res> {
+  __$$NewsImplCopyWithImpl(_$NewsImpl _value, $Res Function(_$NewsImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of NewsState
@@ -652,12 +651,12 @@ class __$$PostsImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postList = null,
+    Object? newsList = null,
   }) {
-    return _then(_$PostsImpl(
-      postList: null == postList
-          ? _value._postList
-          : postList // ignore: cast_nullable_to_non_nullable
+    return _then(_$NewsImpl(
+      newsList: null == newsList
+          ? _value._newsList
+          : newsList // ignore: cast_nullable_to_non_nullable
               as List<NewsModel>,
     ));
   }
@@ -665,42 +664,42 @@ class __$$PostsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PostsImpl implements _Posts {
-  const _$PostsImpl({required final List<NewsModel> postList})
-      : _postList = postList;
+class _$NewsImpl implements _News {
+  const _$NewsImpl({required final List<NewsModel> newsList})
+      : _newsList = newsList;
 
-  final List<NewsModel> _postList;
+  final List<NewsModel> _newsList;
   @override
-  List<NewsModel> get postList {
-    if (_postList is EqualUnmodifiableListView) return _postList;
+  List<NewsModel> get newsList {
+    if (_newsList is EqualUnmodifiableListView) return _newsList;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_postList);
+    return EqualUnmodifiableListView(_newsList);
   }
 
   @override
   String toString() {
-    return 'NewsState.posts(postList: $postList)';
+    return 'NewsState.news(newsList: $newsList)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PostsImpl &&
-            const DeepCollectionEquality().equals(other._postList, _postList));
+            other is _$NewsImpl &&
+            const DeepCollectionEquality().equals(other._newsList, _newsList));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_postList));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_newsList));
 
   /// Create a copy of NewsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PostsImplCopyWith<_$PostsImpl> get copyWith =>
-      __$$PostsImplCopyWithImpl<_$PostsImpl>(this, _$identity);
+  _$$NewsImplCopyWith<_$NewsImpl> get copyWith =>
+      __$$NewsImplCopyWithImpl<_$NewsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -708,9 +707,9 @@ class _$PostsImpl implements _Posts {
     required TResult Function() initial,
     required TResult Function(String errorMessage) error,
     required TResult Function() loading,
-    required TResult Function(List<NewsModel> postList) posts,
+    required TResult Function(List<NewsModel> newsList) news,
   }) {
-    return posts(postList);
+    return news(newsList);
   }
 
   @override
@@ -719,9 +718,9 @@ class _$PostsImpl implements _Posts {
     TResult? Function()? initial,
     TResult? Function(String errorMessage)? error,
     TResult? Function()? loading,
-    TResult? Function(List<NewsModel> postList)? posts,
+    TResult? Function(List<NewsModel> newsList)? news,
   }) {
-    return posts?.call(postList);
+    return news?.call(newsList);
   }
 
   @override
@@ -730,11 +729,11 @@ class _$PostsImpl implements _Posts {
     TResult Function()? initial,
     TResult Function(String errorMessage)? error,
     TResult Function()? loading,
-    TResult Function(List<NewsModel> postList)? posts,
+    TResult Function(List<NewsModel> newsList)? news,
     required TResult orElse(),
   }) {
-    if (posts != null) {
-      return posts(postList);
+    if (news != null) {
+      return news(newsList);
     }
     return orElse();
   }
@@ -745,9 +744,9 @@ class _$PostsImpl implements _Posts {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Error value) error,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Posts value) posts,
+    required TResult Function(_News value) news,
   }) {
-    return posts(this);
+    return news(this);
   }
 
   @override
@@ -756,9 +755,9 @@ class _$PostsImpl implements _Posts {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Error value)? error,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Posts value)? posts,
+    TResult? Function(_News value)? news,
   }) {
-    return posts?.call(this);
+    return news?.call(this);
   }
 
   @override
@@ -767,24 +766,24 @@ class _$PostsImpl implements _Posts {
     TResult Function(_Initial value)? initial,
     TResult Function(_Error value)? error,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Posts value)? posts,
+    TResult Function(_News value)? news,
     required TResult orElse(),
   }) {
-    if (posts != null) {
-      return posts(this);
+    if (news != null) {
+      return news(this);
     }
     return orElse();
   }
 }
 
-abstract class _Posts implements NewsState {
-  const factory _Posts({required final List<NewsModel> postList}) = _$PostsImpl;
+abstract class _News implements NewsState {
+  const factory _News({required final List<NewsModel> newsList}) = _$NewsImpl;
 
-  List<NewsModel> get postList;
+  List<NewsModel> get newsList;
 
   /// Create a copy of NewsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PostsImplCopyWith<_$PostsImpl> get copyWith =>
+  _$$NewsImplCopyWith<_$NewsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
