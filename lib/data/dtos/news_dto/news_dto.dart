@@ -10,8 +10,8 @@ class NewsDto with _$NewsDto {
   factory NewsDto({
     required String id,
     required String name,
-    required String image,
     required String date,
+    String? image,
     String? description,
   }) = _NewsDto;
 

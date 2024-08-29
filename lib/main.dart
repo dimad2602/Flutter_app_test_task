@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => AuthenticationBloc()..add(const AuthenticationEvent.checkPreviousLoginIn()),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'News App',
         routes: routes,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_task/blocs/news_list/news_bloc.dart';
 import 'package:test_task/data/repositories/news_repo/news_repo.dart';
+import 'package:test_task/pages/news_page/news_complite_ui.dart';
 import 'package:test_task/utils/app_colors.dart';
 
 class NewsPage extends StatelessWidget {
@@ -26,17 +27,18 @@ class NewsPage extends StatelessWidget {
         body: BlocBuilder<NewsBloc, NewsState>(
           builder: (context, state) {
             return state.map(
-                initial: (_) {
-                  return Text("initial");
+                initial: (_) => const SizedBox.shrink(),
+                error: (state) {
+                  return Center(
+                      child: Text(
+                    state.errorMessage,
+                    style: const TextStyle(fontSize: 18),
+                  ));
                 },
-                error:  (errorMessage) {
-                  return Text("${errorMessage}");
-                },
-                loading:  (_) {
-                  return Text("loading");
-                },
-                news:  (newsList) {
-                  return Text("${newsList}");
+                loading: (_) =>
+                    const Center(child: CircularProgressIndicator()),
+                news: (state) {
+                  return newsCompliteUI(context, state.newsList);
                 });
           },
         ),

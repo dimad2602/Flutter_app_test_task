@@ -22,8 +22,8 @@ NewsDto _$NewsDtoFromJson(Map<String, dynamic> json) {
 mixin _$NewsDto {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get image => throw _privateConstructorUsedError;
   String get date => throw _privateConstructorUsedError;
+  String? get image => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
 
   /// Serializes this NewsDto to a JSON map.
@@ -41,7 +41,11 @@ abstract class $NewsDtoCopyWith<$Res> {
       _$NewsDtoCopyWithImpl<$Res, NewsDto>;
   @useResult
   $Res call(
-      {String id, String name, String image, String date, String? description});
+      {String id,
+      String name,
+      String date,
+      String? image,
+      String? description});
 }
 
 /// @nodoc
@@ -61,8 +65,8 @@ class _$NewsDtoCopyWithImpl<$Res, $Val extends NewsDto>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? image = null,
     Object? date = null,
+    Object? image = freezed,
     Object? description = freezed,
   }) {
     return _then(_value.copyWith(
@@ -74,14 +78,14 @@ class _$NewsDtoCopyWithImpl<$Res, $Val extends NewsDto>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
-              as String,
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String,
+      image: freezed == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -98,7 +102,11 @@ abstract class _$$NewsDtoImplCopyWith<$Res> implements $NewsDtoCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String id, String name, String image, String date, String? description});
+      {String id,
+      String name,
+      String date,
+      String? image,
+      String? description});
 }
 
 /// @nodoc
@@ -116,8 +124,8 @@ class __$$NewsDtoImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? image = null,
     Object? date = null,
+    Object? image = freezed,
     Object? description = freezed,
   }) {
     return _then(_$NewsDtoImpl(
@@ -129,14 +137,14 @@ class __$$NewsDtoImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
-              as String,
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String,
+      image: freezed == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -151,8 +159,8 @@ class _$NewsDtoImpl extends _NewsDto {
   _$NewsDtoImpl(
       {required this.id,
       required this.name,
-      required this.image,
       required this.date,
+      this.image,
       this.description})
       : super._();
 
@@ -164,15 +172,15 @@ class _$NewsDtoImpl extends _NewsDto {
   @override
   final String name;
   @override
-  final String image;
-  @override
   final String date;
+  @override
+  final String? image;
   @override
   final String? description;
 
   @override
   String toString() {
-    return 'NewsDto(id: $id, name: $name, image: $image, date: $date, description: $description)';
+    return 'NewsDto(id: $id, name: $name, date: $date, image: $image, description: $description)';
   }
 
   @override
@@ -182,8 +190,8 @@ class _$NewsDtoImpl extends _NewsDto {
             other is _$NewsDtoImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.image, image) || other.image == image) &&
             (identical(other.date, date) || other.date == date) &&
+            (identical(other.image, image) || other.image == image) &&
             (identical(other.description, description) ||
                 other.description == description));
   }
@@ -191,7 +199,7 @@ class _$NewsDtoImpl extends _NewsDto {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, id, name, image, date, description);
+      Object.hash(runtimeType, id, name, date, image, description);
 
   /// Create a copy of NewsDto
   /// with the given fields replaced by the non-null parameter values.
@@ -213,8 +221,8 @@ abstract class _NewsDto extends NewsDto {
   factory _NewsDto(
       {required final String id,
       required final String name,
-      required final String image,
       required final String date,
+      final String? image,
       final String? description}) = _$NewsDtoImpl;
   _NewsDto._() : super._();
 
@@ -225,9 +233,9 @@ abstract class _NewsDto extends NewsDto {
   @override
   String get name;
   @override
-  String get image;
-  @override
   String get date;
+  @override
+  String? get image;
   @override
   String? get description;
 

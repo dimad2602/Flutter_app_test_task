@@ -7,8 +7,8 @@ class NewsModel with _$NewsModel {
   const factory NewsModel({
     required String id,
     required String name,
-    required String image,
     required String date,
+    String? image,
     String? description,
   }) = _NewsModel;
 }

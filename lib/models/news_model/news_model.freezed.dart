@@ -18,8 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$NewsModel {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get image => throw _privateConstructorUsedError;
   String get date => throw _privateConstructorUsedError;
+  String? get image => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
 
   /// Create a copy of NewsModel
@@ -35,7 +35,11 @@ abstract class $NewsModelCopyWith<$Res> {
       _$NewsModelCopyWithImpl<$Res, NewsModel>;
   @useResult
   $Res call(
-      {String id, String name, String image, String date, String? description});
+      {String id,
+      String name,
+      String date,
+      String? image,
+      String? description});
 }
 
 /// @nodoc
@@ -55,8 +59,8 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? image = null,
     Object? date = null,
+    Object? image = freezed,
     Object? description = freezed,
   }) {
     return _then(_value.copyWith(
@@ -68,14 +72,14 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
-              as String,
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String,
+      image: freezed == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -93,7 +97,11 @@ abstract class _$$NewsModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String id, String name, String image, String date, String? description});
+      {String id,
+      String name,
+      String date,
+      String? image,
+      String? description});
 }
 
 /// @nodoc
@@ -111,8 +119,8 @@ class __$$NewsModelImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? image = null,
     Object? date = null,
+    Object? image = freezed,
     Object? description = freezed,
   }) {
     return _then(_$NewsModelImpl(
@@ -124,14 +132,14 @@ class __$$NewsModelImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
-              as String,
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String,
+      image: freezed == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -146,8 +154,8 @@ class _$NewsModelImpl implements _NewsModel {
   const _$NewsModelImpl(
       {required this.id,
       required this.name,
-      required this.image,
       required this.date,
+      this.image,
       this.description});
 
   @override
@@ -155,15 +163,15 @@ class _$NewsModelImpl implements _NewsModel {
   @override
   final String name;
   @override
-  final String image;
-  @override
   final String date;
+  @override
+  final String? image;
   @override
   final String? description;
 
   @override
   String toString() {
-    return 'NewsModel(id: $id, name: $name, image: $image, date: $date, description: $description)';
+    return 'NewsModel(id: $id, name: $name, date: $date, image: $image, description: $description)';
   }
 
   @override
@@ -173,15 +181,15 @@ class _$NewsModelImpl implements _NewsModel {
             other is _$NewsModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.image, image) || other.image == image) &&
             (identical(other.date, date) || other.date == date) &&
+            (identical(other.image, image) || other.image == image) &&
             (identical(other.description, description) ||
                 other.description == description));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, id, name, image, date, description);
+      Object.hash(runtimeType, id, name, date, image, description);
 
   /// Create a copy of NewsModel
   /// with the given fields replaced by the non-null parameter values.
@@ -196,8 +204,8 @@ abstract class _NewsModel implements NewsModel {
   const factory _NewsModel(
       {required final String id,
       required final String name,
-      required final String image,
       required final String date,
+      final String? image,
       final String? description}) = _$NewsModelImpl;
 
   @override
@@ -205,9 +213,9 @@ abstract class _NewsModel implements NewsModel {
   @override
   String get name;
   @override
-  String get image;
-  @override
   String get date;
+  @override
+  String? get image;
   @override
   String? get description;
 
