@@ -18,6 +18,7 @@ class NewsPage extends StatelessWidget {
         appBar: AppBar(
           title: const MediumText(text: 'Новости', appbar: true,),
           backgroundColor: AppColors.appBarColor,
+          centerTitle: true,
           leading: IconButton(
             icon: const Icon(Icons.person),
             onPressed: () {

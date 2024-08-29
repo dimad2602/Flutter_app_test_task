@@ -15,6 +15,7 @@ class NewsDto with _$NewsDto {
     String? description,
   }) = _NewsDto;
 
+
   NewsModel toDomain() => NewsModel(
       id: id, name: name, image: image, date: date, description: description);
 

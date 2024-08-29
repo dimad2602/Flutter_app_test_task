@@ -8,9 +8,8 @@ class NewsRepo implements INewsRepository {
   Future<List<NewsModel>> fetchNews() async {
     final dio = Dio();
     try {
-      print("fetchNews");
       final newsResponse = await NewsRestClient(dio).fetchPosts();
-      print(newsResponse);
+
       final List<NewsModel> news =
           newsResponse.news.map((newsDto) => newsDto.toDomain()).toList();
 

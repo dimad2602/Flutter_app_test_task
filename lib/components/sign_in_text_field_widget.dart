@@ -7,6 +7,7 @@ class SignInTextFieldWidget extends StatefulWidget {
   final Icon? icon;
   final TextEditingController? controller;
   final bool hiddenText;
+  final bool enable;
   final String obscuringCharacter;
   final Icon? trailingIcon;
   final TextInputType? keyboardType;
@@ -16,6 +17,7 @@ class SignInTextFieldWidget extends StatefulWidget {
     this.icon,
     required this.controller,
     this.hiddenText = false,
+    this.enable = true,
     this.helperText = "",
     this.obscuringCharacter = "*",
     this.trailingIcon = const Icon(Icons.cancel_outlined),
@@ -33,13 +35,14 @@ class _MyTextFieldState extends State<SignInTextFieldWidget> {
       controller: widget.controller,
       obscureText: widget.hiddenText,
       obscuringCharacter: widget.obscuringCharacter,
+      enabled: widget.enable,
       onChanged: (value) {
         setState(() {});
       },
       decoration: InputDecoration(
         border: InputBorder.none,
         prefixIcon: widget.icon,
-        suffixIcon: widget.controller!.text.isNotEmpty
+        suffixIcon: widget.controller!.text.isNotEmpty && widget.enable
             ? IconButton(
                 icon: widget.trailingIcon!,
                 onPressed: () {
