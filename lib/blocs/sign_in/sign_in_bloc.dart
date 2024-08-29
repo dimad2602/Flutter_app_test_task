@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:test_task/data/repositories/sign_in_repo/I_sign_in_repo.dart';
+import 'package:test_task/data/repositories/sign_in_repo/i_sign_in_repo.dart';
 import 'package:test_task/models/user_model/user_model.dart';
 
 part 'sign_in_event.dart';
