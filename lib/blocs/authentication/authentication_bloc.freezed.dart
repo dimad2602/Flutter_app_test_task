@@ -548,8 +548,8 @@ class __$$UnauthenticatedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UnauthenticatedImpl implements _Unauthenticated {
-  const _$UnauthenticatedImpl();
+class _$UnauthenticatedImpl extends _Unauthenticated {
+  const _$UnauthenticatedImpl() : super._();
 
   @override
   String toString() {
@@ -628,8 +628,9 @@ class _$UnauthenticatedImpl implements _Unauthenticated {
   }
 }
 
-abstract class _Unauthenticated implements AuthenticationState {
+abstract class _Unauthenticated extends AuthenticationState {
   const factory _Unauthenticated() = _$UnauthenticatedImpl;
+  const _Unauthenticated._() : super._();
 }
 
 /// @nodoc
@@ -679,8 +680,8 @@ class __$$AuthenticatedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AuthenticatedImpl implements _Authenticated {
-  const _$AuthenticatedImpl(this.user);
+class _$AuthenticatedImpl extends _Authenticated {
+  const _$AuthenticatedImpl(this.user) : super._();
 
   @override
   final User user;
@@ -772,8 +773,9 @@ class _$AuthenticatedImpl implements _Authenticated {
   }
 }
 
-abstract class _Authenticated implements AuthenticationState {
+abstract class _Authenticated extends AuthenticationState {
   const factory _Authenticated(final User user) = _$AuthenticatedImpl;
+  const _Authenticated._() : super._();
 
   User get user;
 

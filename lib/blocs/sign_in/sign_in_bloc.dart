@@ -33,7 +33,7 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
       if (result != null) {
         emit(SignInState.success(user: result));
       } else {
-        emit(const SignInState.failure(errorMessage: 'Ошибка входа'));
+        emit(const SignInState.failure(errorMessage: 'Некорректный ввод'));
       }
     } catch (e) {
       emit(SignInState.failure(errorMessage: '$e'));

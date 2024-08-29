@@ -421,8 +421,8 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+class _$InitialImpl extends _Initial {
+  const _$InitialImpl() : super._();
 
   @override
   String toString() {
@@ -513,8 +513,9 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements SignInState {
+abstract class _Initial extends SignInState {
   const factory _Initial() = _$InitialImpl;
+  const _Initial._() : super._();
 }
 
 /// @nodoc
@@ -538,8 +539,8 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
-  const _$LoadingImpl();
+class _$LoadingImpl extends _Loading {
+  const _$LoadingImpl() : super._();
 
   @override
   String toString() {
@@ -630,8 +631,9 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements SignInState {
+abstract class _Loading extends SignInState {
   const factory _Loading() = _$LoadingImpl;
+  const _Loading._() : super._();
 }
 
 /// @nodoc
@@ -681,8 +683,8 @@ class __$$SuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessImpl implements _Success {
-  const _$SuccessImpl({required this.user});
+class _$SuccessImpl extends _Success {
+  const _$SuccessImpl({required this.user}) : super._();
 
   @override
   final User user;
@@ -786,8 +788,9 @@ class _$SuccessImpl implements _Success {
   }
 }
 
-abstract class _Success implements SignInState {
+abstract class _Success extends SignInState {
   const factory _Success({required final User user}) = _$SuccessImpl;
+  const _Success._() : super._();
 
   User get user;
 
@@ -833,8 +836,8 @@ class __$$FailureImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FailureImpl implements _Failure {
-  const _$FailureImpl({required this.errorMessage});
+class _$FailureImpl extends _Failure {
+  const _$FailureImpl({required this.errorMessage}) : super._();
 
   @override
   final String errorMessage;
@@ -939,8 +942,9 @@ class _$FailureImpl implements _Failure {
   }
 }
 
-abstract class _Failure implements SignInState {
+abstract class _Failure extends SignInState {
   const factory _Failure({required final String errorMessage}) = _$FailureImpl;
+  const _Failure._() : super._();
 
   String get errorMessage;
 
