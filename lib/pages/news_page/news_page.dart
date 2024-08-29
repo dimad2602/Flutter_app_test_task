@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_task/blocs/news_list/news_bloc.dart';
+import 'package:test_task/components/medium_text_widget.dart';
 import 'package:test_task/data/repositories/news_repo/news_repo.dart';
 import 'package:test_task/pages/news_page/news_complite_ui.dart';
 import 'package:test_task/utils/app_colors.dart';
@@ -15,7 +16,7 @@ class NewsPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: AppColors.mainColor,
         appBar: AppBar(
-          title: const Text('Новости'),
+          title: const MediumText(text: 'Новости', appbar: true,),
           backgroundColor: AppColors.appBarColor,
           leading: IconButton(
             icon: const Icon(Icons.person),

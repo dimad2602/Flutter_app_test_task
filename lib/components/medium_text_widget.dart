@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class MediumText extends StatelessWidget {
@@ -31,7 +30,7 @@ class MediumText extends StatelessWidget {
           fontFamily: 'Roboto',
           color: color,
           fontSize: appbar
-              ? 22
+              ? 20
               : size == 0
                   ? 18
                   : size,

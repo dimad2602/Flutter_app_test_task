@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SmallTextWidget extends StatelessWidget {
+class SmallText extends StatelessWidget {
   final Color? color;
   final String text;
   final double size;
@@ -9,7 +9,7 @@ class SmallTextWidget extends StatelessWidget {
   final int? maxLines;
   final bool appbar;
 
-  const SmallTextWidget({
+  const SmallText({
     super.key,
     this.color = Colors.black,
     required this.text,
@@ -32,7 +32,7 @@ class SmallTextWidget extends StatelessWidget {
           fontSize: appbar
               ? 16
               : size == 0
-                  ? 12
+                  ? 14
                   : size,
           fontWeight: bold == false ? FontWeight.w400 : FontWeight.bold),
     );

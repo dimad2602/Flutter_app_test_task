@@ -7,10 +7,12 @@ import 'package:test_task/utils/app_colors.dart';
 
 class NewsCardWidget extends StatelessWidget {
   final NewsModel model;
+  final int? maxLinesForName;
 
   const NewsCardWidget({
     super.key,
     required this.model,
+    this.maxLinesForName = 2,
   });
 
   @override
@@ -20,8 +22,7 @@ class NewsCardWidget extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 8),
-          child:
-              SmallTextWidget(text: model.date, color: AppColors.newsDataColor),
+          child: SmallText(text: model.date, color: AppColors.newsDataColor),
         ),
         const SizedBox(
           height: 8,
@@ -56,9 +57,9 @@ class NewsCardWidget extends StatelessWidget {
             : const SizedBox.shrink(),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: SmallTextWidget(
+          child: SmallText(
             text: model.name,
-            maxLines: 2,
+            maxLines: maxLinesForName,
           ),
         ),
       ],
