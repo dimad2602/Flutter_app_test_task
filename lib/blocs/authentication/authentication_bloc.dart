@@ -24,12 +24,12 @@ class AuthenticationBloc
   }
 
   FutureOr<void> _userLoggedIn(
-      _UserLoggedIn value, Emitter<AuthenticationState> emit) async {
+      _UserLoggedIn value, Emitter<AuthenticationState> emit) {
     emit(AuthenticationState.authenticated(value.user));
   }
 
   FutureOr<void> _userLoggedOut(
-      _UserLoggedOut _, Emitter<AuthenticationState> emit) async {
+      _UserLoggedOut _, Emitter<AuthenticationState> emit) {
     emit(const AuthenticationState.unauthenticated());
   }
 
