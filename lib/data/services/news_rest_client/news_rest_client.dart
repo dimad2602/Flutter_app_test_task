@@ -9,5 +9,5 @@ abstract class NewsRestClient {
   factory NewsRestClient(Dio dio, {String baseUrl}) = _NewsRestClient;
 
   @GET('/list.json')
-  Future<NewsResponse> fetchPosts();
+  Future<NewsResponse> fetchNews();
 }

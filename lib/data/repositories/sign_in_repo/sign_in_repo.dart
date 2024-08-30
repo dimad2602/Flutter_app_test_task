@@ -6,10 +6,13 @@ class SignInRepo implements ISignInRepository {
   final SecureStorage storage = SecureStorage();
 
   // Любой номер
-  final RegExp _phoneRegExp = RegExp(r'^\+?[1-9]\d{1,14}$');
+  //final RegExp _phoneRegExp = RegExp(r'^\+?[1-9]\d{1,14}$');
 
   // Только русский формат номера
   //final RegExp _phoneRegExp = RegExp(r'^(?:\+7|8)?\d{10}$');
+
+  // Только русский формат номера + номера из 3 цифр
+  final RegExp _phoneRegExp = RegExp(r'^(?:\+7|8)\d{10}$|^\d{3}$');
 
   @override
   Future<User?> signInWithTelephone({required String telephone}) async {

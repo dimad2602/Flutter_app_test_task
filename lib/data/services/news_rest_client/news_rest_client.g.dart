@@ -24,7 +24,7 @@ class _NewsRestClient implements NewsRestClient {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<NewsResponse> fetchPosts() async {
+  Future<NewsResponse> fetchNews() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

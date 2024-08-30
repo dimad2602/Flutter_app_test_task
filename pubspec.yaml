@@ -35,25 +35,38 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  # Кэширование изображений, загружаемых по сети
   cached_network_image: ^3.4.1
+  # Поддержка работы с SVG-изображениями в Flutter
   flutter_svg: ^2.0.10
 
+  # Аннотации для генерации неизменяемых классов и классов-сущностей. Используется вместе с build_runner.
   freezed_annotation: ^2.4.4
+  # Библиотека для управления маршрутизацией в приложениях Flutter
   auto_route: ^9.2.2
 
+  # Реализация паттерна Bloc
   flutter_bloc: ^8.1.6
+   # Расширение для работы с асинхронными событиями в bloc
   bloc_concurrency: ^0.2.5
+  # Аннотации для сериализации JSON в классы Dart и обратно
   json_annotation: ^4.9.0
 
+   # Простая HTTP-библиотека для выполнения HTTP-запросов.
   http: ^1.2.2
+   # Расширенная HTTP-библиотека для выполнения HTTP-запросов с большим количеством возможностей, таких как перехватчики и повторные попытки.
   dio: ^5.6.0
+  # REST API-клиент, генерируемый на основе аннотаций для взаимодействия с сервером.
   retrofit: ^4.2.0
 
+  # Безопасное хранилище для хранения данных, таких как токены или пароли.
   flutter_secure_storage: ^9.0.0
 
+  # Доступ к системе файлов для работы с путями
   path_provider: ^2.1.4
   path: ^1.9.0
 
+  # Библиотека для анимаций Lottie
   lottie: ^3.1.0
 
 dev_dependencies:
@@ -66,12 +79,20 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
+  # Инструмент для генерации кода на основе аннотаций. Используется с freezed, json_serializable и другими.
   build_runner: ^2.4.12
+  # Пакет для генерации неизменяемых классов и копий классов-сущностей с использованием аннотаций.
   freezed: ^2.5.7
+  # Генератор маршрутов для auto_route.
   auto_route_generator: ^9.0.0
+  # Генератор кода для автоматической сериализации и десериализации JSON.
   json_serializable: ^6.8.0 
 
+  # Генератор REST-клиентов на основе аннотаций для Retrofit
   retrofit_generator: ^8.2.0
+
+  mockito: ^5.4.4
+  bloc_test: ^9.1.7
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
