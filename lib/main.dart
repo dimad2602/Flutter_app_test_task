@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => AuthenticationBloc()..add(const AuthenticationEvent.checkPreviousLoginIn()),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'News App',
         routes: routes,
         theme: ThemeData(

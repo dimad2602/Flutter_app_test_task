@@ -17,7 +17,7 @@ Widget signInCompleteUI(BuildContext context) {
           context
               .read<AuthenticationBloc>()
               .add(AuthenticationEvent.userLoggedIn(user));
-          Navigator.of(context).pushNamed('/NewsPage');
+          Navigator.of(context).pushReplacementNamed('/NewsPage');
         });
         return const SizedBox.shrink();
       }, unauthenticated: () {

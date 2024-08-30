@@ -37,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   context
                       .read<AuthenticationBloc>()
                       .add(const AuthenticationEvent.userLoggedOut());
-                  Navigator.of(context).pushNamed('/SignInPage');
+                  Navigator.of(context).pushReplacementNamed('/SignInPage');
                 });
                 return const SizedBox.shrink();
               }, authenticated: (user) {
